@@ -15,6 +15,13 @@ const CATEGORIES = [
   "Strategy",
 ];
 
+const categoryIcons = {
+  "Calm": "fas fa-mug-hot",
+  "Party": "fas fa-glass-cheers",
+  "Frenetic": "fas fa-bolt",
+  "Strategy": "fas fa-chess-knight",
+};
+
 const GAMES = games;
 
 
@@ -29,7 +36,8 @@ function RenderCategories(props) {
         {categories.map(category => (
           <li key={category}>
             <label>
-              <input onChange={onFilterChange} type="checkbox" value={category} /> {category}
+              <input onChange={onFilterChange} type="checkbox" value={category} />
+              <span>{category} <i className={categoryIcons[category]}></i></span>
             </label>
           </li>
         ))}
@@ -174,11 +182,11 @@ function App() {
           </li>
           <li className="nav-item custom-range">
             <input type="range" className="form-range" min="1" max="10" step="1" id="rangeInputPlayers" value={numberPlayers} onChange={handlePlayersChange} />
-            <p className="navbar-text">Players: {numberPlayers}</p>
+            <p className="navbar-text"><i className="fas fa-users"></i> Players: {numberPlayers}</p>
           </li>
           <li className="nav-item custom-range">
             <input type="range" className="form-range" min="5" max="20" step="1" id="rangeInputDuration" value={selectedDuration} onChange={handleDurationChange} />
-            <p className="navbar-text">Minutes: {selectedDuration}</p>
+            <p className="navbar-text"><i className="fas fa-clock"></i> Minutes: {selectedDuration}</p>
           </li>
         </ul>
       </div>
