@@ -220,7 +220,7 @@ function App() {
             <h5 className="text-start"><span className="badge rounded-pill bg-light text-dark"><i className="fas fa-clock" aria-hidden="true"></i> 5-15 min</span></h5>
             <div className="my-3 py-3">
               <h2 className="display-5">President</h2>
-              <h3 className="display-6">(Asshole, Capitalism or Scum)</h3>
+              <h3 className="display-6">(Asshole, Capitalism or Scum.)</h3>
               <p className="lead">Race to get rid of all of the cards in their hands in order to become "president"</p>
               <button className="btn btn-light" type="button" data-bs-toggle="offcanvas" data-bs-target="#presidentOffCanvas">
                 Read rules!
